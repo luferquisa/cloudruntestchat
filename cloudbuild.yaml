@@ -2,5 +2,8 @@ steps:
  # Build the container image
  - name: 'gcr.io/cloud-builders/docker'
    args: ['build', '-t', 'us-docker.pkg.dev/luisatest/chat/frontend:$COMMIT_SHA', '.']   
+# Push the container image to Container Registry
+ - name: 'gcr.io/cloud-builders/docker'
+   args: ['push', 'us-docker.pkg.dev/luisatest/chat/frontend:$COMMIT_SHA']
 options:
   logging: CLOUD_LOGGING_ONLY
