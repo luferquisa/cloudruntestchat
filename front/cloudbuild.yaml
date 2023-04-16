@@ -1,6 +1,10 @@
 steps:
  # Build the container image
  - name: 'gcr.io/cloud-builders/docker'
+<<<<<<< HEAD
    args: ['build', '-t', 'us-docker.pkg.dev/luisatest/chat/frontend:$COMMIT_SHA', './front']   
+=======
+   args: ['build', '-t', 'us-docker.pkg.dev/luisatest/chat/frontend:$COMMIT_SHA', '.']   
+>>>>>>> 2feba5f26216b7c9006887622ac706b11f575a8d
 options:
   logging: CLOUD_LOGGING_ONLY
