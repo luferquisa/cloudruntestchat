@@ -1,4 +1,4 @@
 steps:
  # Build the container image
- - name: 'gcr.io/cloud-builders/docker'
+ - name: 'us-docker.pkg.dev/luisatest/chat'
    args: ['build', '-t', 'gcr.io/	luisatest/frontend:$COMMIT_SHA', '.']
